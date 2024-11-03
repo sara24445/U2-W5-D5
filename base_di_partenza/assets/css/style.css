@@ -3,90 +3,152 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif; /* Default body font */
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;
 }
 
+/* HEADER STYLES */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  background: #ffc017;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logo {
-  font-family: 'Spectral', serif; /* Using Spectral for logo */
-  font-size: 24px;
+  font-family: 'Spectral', serif;
+  font-size: 28px;
   font-weight: bold;
 }
 
+/* NAVIGATION STYLES */
 nav ul {
   list-style-type: none;
   display: flex;
   gap: 20px;
   margin: 0;
   padding: 0;
+  background-color: white;
+  color: ;
 }
 
 nav a {
   text-decoration: none;
   color: #333;
+  transition: color 0.3s;
 }
 
+nav a:hover {
+  color: #fff;
+}
+
+/* SIGNUP BUTTON */
 .signup-btn {
   padding: 10px 20px;
-  color: white;
-  background-color: #0056b3;
+  color: #fff;
+  background-color: #000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
+.signup-btn:hover {
+  background-color: #444;
+}
+
+/* HERO SECTION STYLES */
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #e7f2ff;
-  padding: 40px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .hero h1 {
   margin: 0 0 10px;
-  font-family: 'Spectral', serif; /* Using Spectral for hero title */
+  font-family: 'Spectral', serif;
+  font-size: 48px;
+  color: #222;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
 }
 
 .hero-btn {
-  padding: 10px 20px;
-  color: white;
-  background-color: #0074cc;
+  padding: 12px 24px;
+  color: #fff;
+  background-color: #000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.trending-articles,
-.more-articles {
-  max-width: 800px;
+.hero-btn:hover {
+  background-color: #444;
+}
+
+/* TRENDING ARTICLES SECTION STYLES */
+.trending-articles {
+  max-width: 1200px;
   margin: 40px auto;
-  padding: 20px;
 }
 
 .articles-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 20px;
 }
 
+/* ARTICLE CARD STYLES */
 .article-card {
-  padding: 20px;
   background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s;
+  width: 60%;
+  margin-left: 8%;
+}
+
+.article-card:hover {
+  transform: scale(1.02);
+}
+
+.main-image {
+  width: 100%;
   border-radius: 5px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.secondary-image {
+  margin-top: 10px;
+  align-self: flex-end;
+  max-width: 40%;
+}
+
+.article-info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* MORE ARTICLES SECTION  */
+.more-articles {
+  margin-top: 40px;
+  text-align: center;
 }
 
 .more-articles ul {
@@ -101,8 +163,18 @@ nav a {
   border-radius: 5px;
 }
 
+/* FOOTER STYLES */
 footer {
   text-align: center;
   padding: 20px;
   background: #ebebeb;
+  position: relative;
+}
+
+/* SVG STYLES */
+svg {
+  background-color: #ffc017;
+}
+h2 {
+  font-weight: bold;
 }
